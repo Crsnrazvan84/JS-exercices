@@ -5,18 +5,35 @@
 </head>
 
 <body>
+    <p>Please enter the length of the first side: <input type="number" id="firstNumber" /> </p>
+    <p>Please enter the length of the second side: <input type="number" id="secondNumber" /></p>
+    <p>Please enter the length of the third side: <input type="number" id="thirdNumber" /></p>
+
+
+    <button onclick="calculateArea()">Calculate</button>
+
     <p id="area"></p>
 
     <script>
-        var a = 5;
-        var b = 6;
-        var c = 7;
-        var semiper = (a + b + c) / 2;
-        var area = Math.sqrt(
-            semiper * (semiper - a) * (semiper - b) * (semiper - c)
-        ).toFixed(2);
+        var firstNumber = document.getElementById("firstNumber");
+        var secondNumber = document.getElementById("secondNumber");
+        var thirdNumber = document.getElementById("thirdNumber");
 
-        document.getElementById("area").innerHTML = "The area of your triangle is: " + area;
+
+        function calculateArea() {
+            num1 = firstNumber.value;
+            num2 = secondNumber.value;
+            num3 = thirdNumber.value;
+            
+            var semiper = (+num1 + +num2 + +num3)/2;
+            var area = Math.sqrt(
+                semiper * (semiper - num1) * (semiper - num2) * (semiper - num3)
+            ).toFixed(2);
+            document.getElementById("area").innerHTML = "The area of your triangle is: " + area;
+        }
+
+
+
     </script>
 </body>
 
