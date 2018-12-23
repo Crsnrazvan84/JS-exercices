@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title> Find the area of a triangle</title>
+</head>
+
+<body>
+    <p id="area"></p>
+
+    <script>
+        var a = 5;
+        var b = 6;
+        var c = 7;
+        var semiper = (a + b + c) / 2;
+        var area = Math.sqrt(
+            semiper * (semiper - a) * (semiper - b) * (semiper - c)
+        ).toFixed(2);
+
+        document.getElementById("area").innerHTML = "The area of your triangle is: " + area;
+    </script>
+</body>
+
+</html>
