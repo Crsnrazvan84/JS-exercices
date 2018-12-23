@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Rotate string</title>
+</head>
+
+<body>
+    <button onclick="rotate()">Rotate</button>
+    <p id="par">w3resource</p>
+
+    <script>
+        function rotate() {
+            var a = document.getElementById("par");
+            var aNode = a.childNodes[0];
+            var text = aNode.data;
+            setInterval(function () {
+                text = text[text.length - 1] + text.substring(0, text.length - 1);
+                aNode.data = text;
+            }, 100);
+
+
+        }
+
+    </script>
+</body>
+
+</html>
