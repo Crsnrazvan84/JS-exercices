@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>JavaScript get current date</title>
+</head>
+
+<body>
+    <p id="date1"></p>
+    <p id="date2"></p>
+    <p id="date3"></p>
+    <p id="date4"></p>
+
+    <script>
+        var day = new Date();
+        day = day.getDate();
+        if (day < 10) {
+            day = "0" + day;
+        }
+
+        var month = new Date();
+        month = month.getMonth() + 1;
+        if (month < 10) {
+            month = "0" + month;
+        }
+
+        var year = new Date();
+        year = year.getFullYear();
+
+        document.getElementById("date1").innerHTML = month + "-" + day + "-" + year;
+        document.getElementById("date2").innerHTML = month + "/" + day + "/" + year;
+        document.getElementById("date3").innerHTML = day + "-" + month + "-" + year;
+        document.getElementById("date4").innerHTML = day + "/" + month + "/" + year;
+    </script>
+</body>
+
+</html>
