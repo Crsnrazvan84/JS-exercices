@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Guess the number</title>
+</head>
+
+<body>
+
+    <p>Enter a number from 1 to 10: <input type="number" id="userNumber" /></p>
+    <button onclick="checkNr()">Check here</button>
+    <p >Your number is: <span id="yourNumber"></span><br>
+    The random number is: <span id="randomNumber" ></span></p>
+    <div id="true">Good Work</div>
+    <div id="false">Not Matched</div>
+
+
+    <style>
+        div {
+            margin: 0 15px 0 15px;
+            float: left;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+    </style>
+
+
+
+    <script>
+
+        var inputNr = document.getElementById("userNumber");
+
+
+        function checkNr() {
+
+            var num1 = inputNr.value;
+            var num2 = Math.floor(Math.random() * 10) + 1;
+            document.getElementById("yourNumber").innerHTML = num1;
+            document.getElementById("randomNumber").innerHTML = num2;
+            if (num1 == num2) {
+                correct();
+            } else {
+                notMatched();
+            }
+        }
+
+        function correct () {
+            document.getElementById("true").style.backgroundColor = "lightgreen";
+            document.getElementById("false").style.backgroundColor = "white";
+        }
+
+        function notMatched () {
+            document.getElementById("true").style.backgroundColor = "white";
+            document.getElementById("false").style.backgroundColor = "red";
+        }
+
+    </script>
+</body>
+
+</html>
