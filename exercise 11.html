@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Degrees Converter</title>
+    </head>
+
+    <body>
+        <h2>Degree Converter</h2>
+        <p>Enter degrees <input type="number" id="temp"></p>
+        <button onclick="toCelsius()"> Convert to Celsius</button>
+        <button onclick="toFahrenheit()">Convert to Fahrenheit</button>
+        <p> Your result: <span id="result"></span></p>
+
+        <script>
+
+            var a = document.getElementById("temp");
+
+            function toCelsius () {
+                var num1 = a.value;
+                var num2 = (num1 - 32) * 5/9;
+                document.getElementById("result").innerHTML = num1 + " °F is " + num2.toFixed(2) + " °C";
+            }
+
+            function toFahrenheit () {
+                var num1 = a.value;
+                var num2 = num1 *1.8 + 32;
+                document.getElementById("result").innerHTML = num1 + " °C is " + num2.toFixed(2) + " °F";
+            }
+        
+        </script>
+    </body>
+</html>
