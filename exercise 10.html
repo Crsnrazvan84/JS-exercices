@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <h2>Simple Calculatpr</h2>
+    <p>1st Number: <input type="number" id="firstnr"></p>
+    <p>2nd Number: <input type="number" id="secondnr"></p>
+    <button onclick="multiplyBy()">Multiply</button>
+    <button onclick="divideBy()">Divide</button>
+    <button onclick="addBy()">Add</button>
+    <button onclick="diffBy()">Difference</button>
+
+    <p>The result is: <br>
+    <span id="result"></span>
+    </p>
+    
+
+    <script>
+        var a = document.getElementById("firstnr");
+        var b = document.getElementById("secondnr");
+
+        function multiplyBy () {
+            num1 = a.value;
+            num2 = b.value;
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function divideBy () {
+            num1 = a.value;
+            num2 = b.value;
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+
+        function addBy () {
+            num1 = a.value;
+            num2 = b.value;
+            document.getElementById("result").innerHTML = +num1 + +num2;
+        }
+
+        function diffBy () {
+            num1 = a.value;
+            num2 = b.value;
+            document.getElementById("result").innerHTML = num1 - num2;
+        }
+
+        
+    
+    </script>
+</body>
+
+</html>
