@@ -6,8 +6,11 @@
 </head>
 
 <body>
-    <p id="day"></p>
-    <p id="time"></p>
+    <p>Write a JavaScript program to display the current day and time in the following format: <br>
+        Sample Output : Today is : Tuesday. <br>
+        Current time is : 10 PM : 30 : 38</p>
+    <h2>Current date and time:</h2>
+    <p><span id="day"></span><br><span id="time"></span></p>
 
 
     <script>
@@ -18,24 +21,24 @@
 
         var b = new Date();
         var hour = b.getHours();
-        
-        
+
+
 
         var min = b.getMinutes();
-        if (min <=9) {
-             min = "0"+min;
-        } 
+        if (min <= 9) {
+            min = "0" + min;
+        }
         var sec = b.getSeconds();
-        if (sec <=9){
-            sec  = "0"+sec;
+        if (sec <= 9) {
+            sec = "0" + sec;
         }
-        var ampm = (hour<=12)? "AM" : "PM";
+        var ampm = (hour <= 12) ? "AM" : "PM";
 
-        if (hour>12) {
-               hour = hour - 12; 
+        if (hour > 12) {
+            hour = hour - 12;
         }
-        if (hour<=9){
-            hour = "0"+hour;
+        if (hour <= 9) {
+            hour = "0" + hour;
         }
         document.getElementById("time").innerHTML = "Current time is: " + hour + " " + ampm + " : " + min + " : " + sec
 
