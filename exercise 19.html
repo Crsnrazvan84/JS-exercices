@@ -1,13 +1,24 @@
 <html>
 <head>
-    <title></title>
+    <title>Integer is within 20 of 100 or 400</title>
 </head>
 
 <body>
+    <p>Write a JavaScript program to check a given integer is within 20 of 100 or 400.</p>
+    <p> Insert Number <input type="number" id="numInput"></p>
+    <button onclick="check()">Check</button>
     
+    <p>The answer is <span id="result"></span></p>
 
     <script>
-    
+    function check(){
+        var a = document.getElementById("numInput").value;
+       if ((Math.abs(100 - a)) <=20 || (Math.abs(400 - a)) <=20 ) {
+           document.getElementById("result").innerHTML = "True";
+       }else{
+        document.getElementById("result").innerHTML = "False";
+       }
+    }
     </script>
 </body>
 
