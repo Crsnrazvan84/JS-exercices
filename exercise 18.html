@@ -4,10 +4,47 @@
 </head>
 
 <body>
-    
+    <p>18. Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50. </p>
+    <p> Insert 1st Number <input type="number" id="num1Input"></p>
+    <p> Insert 2nd Number <input type="number" id="num2Input"></p>
+    <button onclick="check()">Check</button>
+    <div id="true">True</div>
+    <div id="false">False</div>
+
+
+    <style>
+        div {
+            float: left;
+            margin: 0 15px 0 15px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 5px;
+
+        }
+
+    </style>
 
     <script>
-    
+    function check() {
+        var a = document.getElementById("num1Input").value;
+        var b = document.getElementById("num2Input").value;
+        if (a == 50 || b == 50 || (+a + +b) == 50) {
+            isTrue();
+        }else{
+            isFalse();
+        }
+
+        function isTrue (){
+            document.getElementById("true").style.backgroundColor = "green"
+            document.getElementById("false").style.backgroundColor = "white"
+        }
+        function isFalse (){
+            document.getElementById("true").style.backgroundColor = "white"
+            document.getElementById("false").style.backgroundColor = "Red"
+        }
+
+    }
     </script>
 </body>
 
