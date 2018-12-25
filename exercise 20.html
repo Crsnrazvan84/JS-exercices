@@ -1,13 +1,27 @@
 <html>
 <head>
-    <title></title>
+    <title>Positive or negative integers</title>
 </head>
 
 <body>
-    
+    <p>Write a JavaScript program to check from two given integers, if one is positive and one is negative.</p>
+    <p>Insert 1st Number <input type="number" id="num1Input"></p>
+    <p>Insert 2nd Number <input type="number" id="num2Input"></p>
+    <button onclick="check()">Check Here</button>
+    <p>Answer: <span id="result"></span></p>
 
     <script>
-    
+     function check() {
+         var a = document.getElementById("num1Input").value;
+         var b = document.getElementById("num2Input").value;
+         if ((a < 0 && b >= 0) || (a >= 0 && b < 0)) {
+            document.getElementById("result").innerHTML = "one is positive and one is negative";
+         }else if(a >= 0 && b >= 0){
+            document.getElementById("result").innerHTML = "both numbers are positive";
+         }else{
+            document.getElementById("result").innerHTML = "both numbers are negative";
+         }
+     }
     </script>
 </body>
 
