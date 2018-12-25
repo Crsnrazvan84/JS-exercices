@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            Variable with user defined name
+        </title>
+    </head>
+
+    <body>
+        <h1>Variable with user defined name</h1>
+        <p>Enter variable: <input type="text" id="varInput"></p>
+        <button onclick="getVar()">Click me</button>
+        <p>Your variable is: <span id="varName"></span></p>
+
+        <script>
+            function getVar (){
+                var a = document.getElementById("varInput").value;
+                document.getElementById("varName").innerHTML = a;
+            }
+        </script>
+    </body>
+</html>
