@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Get page URL</title>
+</head>
+<body>
+    <h1>Get the URL of this page</h1>
+    <button onclick="getURL()">Get URL</button>
+    <p>The URL of this page is:<br/> <span id="url"></span></p>
+
+    <script>
+        function getURL () {
+            document.getElementById("url").innerHTML = document.URL;
+        }
+    </script>
+</body>
+</html>
