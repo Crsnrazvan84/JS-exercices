@@ -1,13 +1,33 @@
 <html>
+
 <head>
-    <title></title>
+    <title>Remove a character at the specified position of a given string and return the new string.</title>
 </head>
 
 <body>
-    
+    <p>22. Write a JavaScript program to remove a character at the specified position of a given string and return the
+        new string. </p>
+    <p>Write text here: <input type="text" id="textInput"></p>
+    <p>Remove character at position nr: <input type="number" id="posNr"></p>
+    <button onclick="remChar()">Remove</button>
+    <p>You removed character is <span id="charRemoved"></span> and what's left is: <span id="result"></span></p>
+
+    <style>
+        span {
+            color: blue;
+        }
+    </style>
 
     <script>
-    
+        function remChar() {
+            var txtInput = document.getElementById("textInput").value;
+            var charPos = document.getElementById("posNr").value - 1;
+            var removedChar = txtInput.substring(charPos, charPos + 1);
+            document.getElementById("charRemoved").innerHTML = removedChar;
+            var beforeChar = txtInput.substring(0, charPos);
+            var afterChar = txtInput.substring(charPos + 1, txtInput.length);
+            document.getElementById("result").innerHTML = beforeChar + afterChar;
+        }
     </script>
 </body>
 
