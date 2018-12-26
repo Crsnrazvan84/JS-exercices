@@ -1,13 +1,23 @@
 <html>
 <head>
-    <title></title>
+    <title>Exercise 27</title>
 </head>
 
 <body>
-    
+    <p>27. Write a JavaScript program to check if a string starts with 'Java' and false otherwise. </p>
+    <p>Enter text <input type="text" id="txt"></p>
+    <p> <a href="#" onclick="check()">Check</a> if the string starts with 'Java'</p>
+    <p id="result"></p>
 
     <script>
-    
+        function check(){
+            var txt = document.getElementById("txt").value;          
+            if (txt.substring(0, 4) == "Java" ) {
+                document.getElementById("result").innerHTML = "True";
+            } else {
+            document.getElementById("result").innerHTML = "False";
+            }
+        }
     </script>
 </body>
 
