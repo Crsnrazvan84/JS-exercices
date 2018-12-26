@@ -4,10 +4,18 @@
 </head>
 
 <body>
-    
+    <p>24. Write a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.</p>
+    <p>Enter text Here <input type="text" id="txt"></p>
+    <a href="#" onclick="newString()">Create new string</a>
+    <p id="result"></p>
 
     <script>
-    
+        function newString(){
+            var text = document.getElementById("txt").value;
+            var newText = text.charAt(0) + text + text.charAt(0);
+            document.getElementById("result").innerHTML = newText;
+          
+        }
     </script>
 </body>
 
