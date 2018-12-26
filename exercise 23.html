@@ -4,10 +4,26 @@
 </head>
 
 <body>
-    
+    <p>23. Write a JavaScript program to create a new string from a given string changing the position of first and last characters. <br>
+         The string length must be greater than or equal to 1.</p>
+
+    <p>Enter text here: <input type="text" id="textInput"></p>
+    <p>Click <a href="#" onclick="switchChar()">here</a> to switch characters</p>
+    <p>Your result is: <br>
+    <span id="result"></span></p>     
 
     <script>
-    
+        function switchChar(){
+            var txt = document.getElementById("textInput").value;
+            if(txt.length < 1){
+                document.getElementById("result").innerHTML = "Please enter text";
+            }else{
+            var firstChar = txt.substring(0, 1);
+            var lastChar = txt.substring(txt.length-1, txt.length);
+            var middle = txt.substring(1, txt.length - 1);
+            document.getElementById("result").innerHTML = lastChar+middle+firstChar;
+            }
+        }
     </script>
 </body>
 
