@@ -1,13 +1,28 @@
 <html>
 <head>
-    <title></title>
+    <title> Add "Py" in front of a given string</title>
 </head>
 
 <body>
-    <p></p>
+    <p>21. Write a JavaScript program to create a new string adding "Py" in front of a given string. <br>
+         If the given string begins with "Py" then return the original string. </p>
+
+    <p>Write something here: <input type="text" id="demo"></p>
+    <button onclick="addPy()">Add Py</button>
+    <p>The result is: <br>
+    <span id="result"></span></p>
 
     <script>
-    
+        function addPy (){
+            var a = document.getElementById("demo").value;
+            if ( a === null || a === undefined || a.substring(0,2) === "Py") {
+                document.getElementById("result").innerHTML = a;
+
+            }else{
+                document.getElementById("result").innerHTML = "Py" + a;
+            }
+
+        }
     </script>
 </body>
 
