@@ -1,14 +1,31 @@
 <html>
+
 <head>
     <title>exercise 31</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>31. Write a JavaScript program to find the largest of three given integers. </p>
+    <p>Insert 1st number: <input type="number" id="input1"></p>
+    <p>Insert 2nd number: <input type="number" id="input2"></p>
+    <p>Insert 3rd number: <input type="number" id="input3"></p>
+    <button onclick="check()">Click</button>
+    <p>The largest number is: <span id="result"></span></p>
+
 
     <script>
-    
+        function check() {
+            var a = parseInt(document.getElementById("input1").value);
+            var b = parseInt(document.getElementById("input2").value);
+            var c = parseInt(document.getElementById("input3").value);
+            if (a > b && a > c) {
+                document.getElementById("result").innerHTML = a;
+            } else if (b > a && b > c) {
+                document.getElementById("result").innerHTML = b;
+            } else if (c > a && c > b) {
+                document.getElementById("result").innerHTML = c;
+            }
+        }
     </script>
 </body>
 
