@@ -1,14 +1,31 @@
 <html>
+
 <head>
     <title>exercise 30</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>30. Write a JavaScript program to check if a string "Script" presents at 5th (index 4) position in a given
+        string, <br>
+        if "Script" presents in the string return the string without "Script" otherwise return the original one. </p>
+
+    <p>Enter text here: <input type="text" id="textInput"></p>
+    <p> <a href="#" onclick="checkIf()">Check</a> if "Script" presents in your text</p>
+    <p id="result"></p>
+
 
     <script>
-    
+        function checkIf() {
+            var txt = document.getElementById("textInput").value;
+            var sub = txt.substring(4, 10);           
+            var before = txt.substring(0, 4);      
+            var after = txt.substring(10, txt.length);
+            if (sub == "Script") {
+                document.getElementById("result").innerHTML = before + after;
+            } else {
+                document.getElementById("result").innerHTML = txt;
+            }
+        }
     </script>
 </body>
 
