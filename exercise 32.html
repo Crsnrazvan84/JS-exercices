@@ -4,11 +4,30 @@
 </head>
 
 <body>
-    <p></p>
+    <p>32. Write a JavaScript program to find a value which is nearest to 100 from two different given integer values. </p>
+    <p>Enter 1st mber: <input type="number" id="input1" oninput="check()"></p>
+    <p>Enter 2nd number: <input type="number" id="input2" oninput="check()"></p>
+    <p>The nearest number to 100 is: <span id="result"></span></p>
+
     
 
     <script>
-    
+        function check(){
+            var a = document.getElementById("input1").value;
+            aDiff = Math.abs(100 - a);
+            console.log("adiff is " + aDiff);
+            var b = document.getElementById("input2").value;
+            bDiff = Math.abs(100 - b);
+            console.log("bDiff is " + bDiff);
+
+            if (aDiff === bDiff){
+                document.getElementById("result").innerHTML = "Both numbers are equally near to 100!"
+            }else if(aDiff < bDiff){
+                document.getElementById("result").innerHTML = a;
+            }else if(aDiff > bDiff){
+                document.getElementById("result").innerHTML = b;
+            }
+        }
     </script>
 </body>
 
