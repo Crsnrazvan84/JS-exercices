@@ -1,13 +1,43 @@
 <html>
 <head>
-    <title></title>
+    <title>exercise 29</title>
 </head>
 
 <body>
-    
+    <p>29. Write a JavaScript program to check if three given integer values are in the range 50..99 (inclusive). <br>
+          Return true if one or more of them are in the said range.</p>
+    <p>Enter 1st number: <input type="number" id="firstNr"></p>
+    <p>Enter 2nd number: <input type="number" id="secondNr"></p>
+    <p>Enter 3rd number: <input type="number" id="thirdNr"></p>
+    <p>Click this button to check if any of thr given nmbers are in the range 50..99 <br>
+    <button onclick="check()">Check</button> </p>
+    <div id="true">True</div>
+    <div id="false">False</div>
+
+    <style>
+        div {
+            float: left;
+            width: 200px;
+            margin: 0 15px 0 15px;
+            border: 1px solid black;
+            border-radius: 3px;
+            text-align: center;
+        }
+    </style>
 
     <script>
-    
+        function check(){
+            var a = document.getElementById("firstNr").value;
+            var b = document.getElementById("secondNr").value;
+            var c = document.getElementById("thirdNr").value;
+            if ((a >= 50 && a <= 99) || (b >= 50 && b <= 99) || (c >= 50 && c <= 99)){
+                document.getElementById("true").style.backgroundColor = "lightgreen";
+                document.getElementById("false").style.backgroundColor = "white";
+            }else{
+                document.getElementById("true").style.backgroundColor = "white";
+                document.getElementById("false").style.backgroundColor = "red";
+            }
+        }
     </script>
 </body>
 
