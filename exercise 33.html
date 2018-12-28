@@ -1,14 +1,42 @@
 <html>
+
 <head>
     <title>exercise 33</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>33. Write a JavaScript program to check if two numbers are in range 40..60 or in the range 70..100 inclusive.
+    </p>
+    <p>Insert 1st number: <input type="number" id="input1" oninput="check()"></p>
+    <p>Insert 1st number: <input type="number" id="input2" oninput="check()"></p>
+    <div id="result"></div>
+
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin-left: 50px;
+        }
+    </style>
 
     <script>
-    
+        var a = document.getElementById("input1");
+        var b = document.getElementById("input2");
+
+        function check() {
+            var x = a.value;
+            var y = b.value;
+            if ((x >= 40 && x <= 60 && y >= 40 && y <= 60) || (x >= 70 && x <= 100 && y >= 70 && y <= 100)) {
+                document.getElementsByTagName("DIV")[0].style.backgroundColor = "lightgreen";
+            } else {
+                document.getElementsByTagName("DIV")[0].style.backgroundColor = "red";
+            }
+
+        }
+
+
     </script>
 </body>
 
