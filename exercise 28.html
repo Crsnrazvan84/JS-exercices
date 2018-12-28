@@ -1,13 +1,42 @@
 <html>
 <head>
-    <title></title>
+    <title>exercise 28</title>
 </head>
 
 <body>
+    <p>28. Write a JavaScript program to check if two given integer values are in the range 50..99 (inclusive). <br>
+         Return true if either of them are in the said range. </p>
     
+    <p>Enter 1st number <input type="number" id="firstNr"></p>
+    <p>Enter 2nd number <input type="number" id="secondNr"></p>
+    <p><a href="#" onclick="check()">Check </a>if either of them are in the range 50..99</p>
+    <div id="result"></div>
+
+    <style>
+        div {
+            width: 175px;
+            height: 175px;
+            border: 1px solid black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+    </style>
 
     <script>
-    
+        function check (){
+            var num1 = document.getElementById("firstNr").value;
+            var num2 = document.getElementById("secondNr").value;
+            if ((num1 >= 50 && num1 <=99) || (num2 >= 50 && num2 <=99)){
+                document.getElementById("result").style.backgroundColor = "lightgreen";
+                document.getElementById("result").innerHTML = "True!";
+            }else{
+            document.getElementById("result").style.backgroundColor = "red";
+            document.getElementById("result").innerHTML = "False";
+            }
+        }
     </script>
 </body>
 
