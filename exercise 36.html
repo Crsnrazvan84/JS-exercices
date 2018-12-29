@@ -1,14 +1,52 @@
 <html>
+
 <head>
     <title>exercise 36</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>36. Write a JavaScript program to check if the last digit of the three given positive integers is same.</p>
+    <p>Enter 1st number <input type="number" id="firstNr"></p>
+    <p>Enter 2nd number <input type="number" id="secondNr"></p>
+    <p>Enter 3rd number <input type="number" id="thirdNr"></p>
+    <button onclick="check()">Check</button>
+    <div id="true">Yes</div>
+    <div id="false">No</div>
+
+
+    <style>
+        button {
+            float: left;
+        }
+
+        div {
+            width: 180px;
+            margin-left: 15px;
+            float: left;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
 
     <script>
-    
+        function check() {
+            var a = document.getElementById('firstNr').value;
+            var b = document.getElementById('secondNr').value;
+            var c = document.getElementById('thirdNr').value;
+            var lastA = a % 10;
+            var lastB = b % 10;
+            var lastC = c % 10;
+
+            if (lastA == lastB && lastA == lastC) {
+                document.getElementById("true").style.backgroundColor = 'lightgreen';
+                document.getElementById("false").style.backgroundColor = 'white';
+            } else {
+                document.getElementById("true").style.backgroundColor = 'white';
+                document.getElementById("false").style.backgroundColor = 'red';
+            }
+        }
+
     </script>
 </body>
 
