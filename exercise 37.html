@@ -4,11 +4,20 @@
 </head>
 
 <body>
-    <p></p>
-    
+    <p>37. Write a JavaScript program to create new string with first 3 characters are in lower case. <br>
+         If the string length is less than 3 convert all the characters in upper case. </p>
+    <p>Enter text here: <input type="text" id="txtInput" oninput="create()"></p>
+    <p>The result is: <br> <span id="result"></span></p>
 
     <script>
-    
+        function create(){
+            var txt = document.getElementById('txtInput').value;
+            var pre = txt.substring(0, 3).toLowerCase();
+            var after = txt.substring(3, txt.length);
+            
+            (txt.length < 3) ? document.getElementById('result').innerHTML = txt.toUpperCase() : 
+            document.getElementById('result').innerHTML = pre + after
+        }
     </script>
 </body>
 
