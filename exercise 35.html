@@ -1,14 +1,72 @@
 <html>
+
 <head>
     <title>exercise 35</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>35. Write a JavaScript program to check a given string contains 2 to 4 numbers of a specified character. </p>
+    <P>Enter text here: <input type="text" id="txtInput"></P>
+    <P>Enter the character you wish to count: <input type="text" id="charInput"></P>
+    <button onclick="countChar()">Count</button> or <button onclick="countCase()">Count case sensitive</button>
+    <p>Number of specified character: <span id="nrChar"></span></p>
+    <div id="true">True</div>
+    <div id="false">False</div>
+
+    <style>
+        div {
+            width: 180px;
+            margin-left: 15px;
+            float: left;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
 
     <script>
-    
+
+        
+        var numberChar = 0;
+
+        function countChar() {
+            var txt = document.getElementById("txtInput").value;
+            txt = txt.toLowerCase();
+            var char = document.getElementById("charInput").value;
+            for (var i = 0; i < txt.length; i++) {
+                if (txt.charAt(i) == char) {
+                    numberChar++
+                }
+            }
+            trueFalse(); 
+        }
+
+        function countCase(){
+            var txt = document.getElementById("txtInput").value;
+            var char = document.getElementById("charInput").value;
+            for (var i = 0; i < txt.length; i++) {
+                if (txt.charAt(i) == char) {
+                    numberChar++
+                }
+            }
+            trueFalse(); 
+        }
+       
+        function trueFalse() {
+
+            console.log("numbechar = " + numberChar)
+            document.getElementById("nrChar").innerHTML = numberChar;
+
+            if (numberChar == 2 || numberChar == 4 && numberChar != 0) {
+                document.getElementById("true").style.backgroundColor = 'lightgreen';
+                document.getElementById("false").style.backgroundColor = 'white';
+            } else {
+                document.getElementById("true").style.backgroundColor = 'white';
+                document.getElementById("false").style.backgroundColor = 'red';
+            }
+            numberChar = 0;
+        }
+
     </script>
 </body>
 
