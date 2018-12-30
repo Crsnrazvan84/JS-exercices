@@ -1,14 +1,35 @@
 <html>
+
 <head>
     <title>exercise 42</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>42. Write a JavaScript program to check if three given numbers (integers) are increasing in strict mode and flag
+        is "false", <br>
+        however if "true" is false the numbers will in soft mode. <br>
+        Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31 </p>
+
+    <p>Enter 1st number: <input type="number" id="firstInput" oninput="check()"></p>
+    <p>Enter 2nd number: <input type="number" id="secondInput" oninput="check()"></p>
+    <p>Enter 3rd number: <input type="number" id="thirdInput" oninput="check()"></p>
+    <p>The result is: <span id="result"></span></p>
 
     <script>
-    
+        function check(){
+            var a = document.getElementById('firstInput').value;
+            var b = document.getElementById('secondInput').value;
+            var c = document.getElementById('thirdInput').value;
+            var res = 0;
+            if(a < b && b < c) {
+                res = "Strict mode"
+            }else if(b < c){
+                res = "Soft Mode"
+            }else{
+                res = "The numbers are not increasing";
+            }
+        document.getElementById('result').innerHTML = res;
+        }
     </script>
 </body>
 
