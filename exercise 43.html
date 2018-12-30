@@ -1,14 +1,37 @@
 <html>
+
 <head>
     <title>exercise 43</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them
+        have the same rightmost digit.</p>
+    <p>Enter 1st number: <input type="number" id="firstInput" oninput="check()"></p>
+    <p>Enter 2nd number: <input type="number" id="secondInput" oninput="check()"></p>
+    <p>Enter 3rd number: <input type="number" id="thirdInput" oninput="check()"></p>
+    <p>Answer: <span id="result"></span></p>
 
     <script>
-    
+        function check() {
+            var a = document.getElementById('firstInput').value;
+            var lastA = a % 10;
+            var b = document.getElementById('secondInput').value;
+            var lastB = b % 10;
+            var c = document.getElementById('thirdInput').value;
+            var lastC = c % 10;
+            var res = 0;
+            if (a < 0 || b < 0 || c < 0) {
+                res = "All numbers must be positive";
+            } else if (lastA == lastB && lastB == lastC) {
+                res = "All three numbers have the same rightmost digit";
+            } else if ((lastA == lastB || lastA == lastC) || lastB == lastC) {
+                res = "Two numbers have the same rightmost digit";
+            } else {
+                res = "None of the numbers have the same rightmost digit";
+            }
+            document.getElementById('result').innerHTML = res;
+        }
     </script>
 </body>
 
