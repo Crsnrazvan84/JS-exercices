@@ -4,11 +4,29 @@
 </head>
 
 <body>
-    <p></p>
-    
+    <p>44. Write a JavaScript program to check from three given integers that if a number is greater than or equal to 20 and less than one of the others. </p>
+    <p>Enter 1st number: <input type="number" id="firstInput" oninput="check()"></p>
+    <p>Enter 2nd number: <input type="number" id="secondInput" oninput="check()"></p>
+    <p>Enter 3rd number: <input type="number" id="thirdInput" oninput="check()"></p>
+    <p>Answer: <span id="result"></span></p>
 
     <script>
-    
+        function check(){
+            var a = document.getElementById('firstInput').value;
+            var b = document.getElementById('secondInput').value;
+            var c = document.getElementById('thirdInput').value;
+            var res = 0;
+            if (a >= 20 && (a < b || a < c)) {
+                res =  'First number'
+            }else if(b >= 20 && (b < a || b < c) ){
+                res =  'Second number'
+            }else if(c >= 20 && (c < a || c < b)){
+                res =  'Third number'
+            }else{
+                res = 'None'
+            }
+            document.getElementById('result').innerHTML = res;
+        }
     </script>
 </body>
 
