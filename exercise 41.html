@@ -4,11 +4,30 @@
 </head>
 
 <body>
-    <p></p>
+    <p>41. Write a JavaScript program to check three given numbers, <br>
+     if the three numbers are same return 30 otherwise return 40 and if two numbers are same return 20.</p>
+
+    <p>Enter 1st number: <input type="number" id="firstInput" oninput="check()"></p>
+    <p>Enter 2nd number: <input type="number" id="secondInput" oninput="check()"></p>
+    <p>Enter 3rd number: <input type="number" id="thirdInput" oninput="check()"></p>
+    <p>The result is: <span id="result"></span></p>
     
 
     <script>
-    
+        function check (){
+            var a = document.getElementById('firstInput').value;
+            var b = document.getElementById('secondInput').value;
+            var c = document.getElementById('thirdInput').value;
+            var res = 0;
+            if ( a == b && a == c){
+                res = 30
+            }else if(a == b || a == c || b == c){
+                res = 40
+            }else{
+                res = 20
+            }
+            document.getElementById('result').innerHTML = res;
+        }
     </script>
 </body>
 
