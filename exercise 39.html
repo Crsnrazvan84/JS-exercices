@@ -4,11 +4,21 @@
 </head>
 
 <body>
-    <p></p>
+    <p>39. Write a JavaScript program to compute the sum of the two given integers, <br>
+         If the sum is in the range 50..80 return 65 other wise return 80. </p>
     
+    <p>Enter 1st number <input type="number" oninput="sum()" id="firstInput"></p>
+    <p>Enter 1st number <input type="number" oninput="sum()" id="secondInput"></p>  
+    <p>The result is: <span id="result"></span></p>  
 
     <script>
-    
+        function sum(){
+            var a = document.getElementById('firstInput').value;
+            var b = document.getElementById('secondInput').value;
+            var res = +a + +b;
+            (res >= 50 && res <= 80) ? res = 65 : res = 80;
+            document.getElementById('result').innerHTML = res;
+        }
     </script>
 </body>
 
