@@ -4,11 +4,27 @@
 </head>
 
 <body>
-    <p></p>
-    
+    <p>46. Write a JavaScript program to check two given non-negative integers and if one of the number (not both) is multiple of 7 or 11.</p>
+    <p>Enter 1st number: <input type="number" id="firstInput" oninput="check()"></p>
+    <p>Enter 2nd number: <input type="number" id="secondInput" oninput="check()"></p>
+    <p>Answer: <span id="result"></span></p>
 
     <script>
-    
+        function check() {
+            var a = document.getElementById('firstInput').value;
+            var b = document.getElementById('secondInput').value;
+            var res = document.getElementById('result');
+
+            if (a < 0 || b < 0){
+                res.innerHTML = "Both numbers must be positive";
+            }else if ((a % 7 == 0 || a % 11 == 0) && (b % 7 == 0 || b % 11 == 0)) {
+                res.innerHTML = "Buth nunbers are multiple of 7 or 11";
+            } else if ((a % 7 == 0 || a % 11 == 0) || (b % 7 == 0 || b % 11 == 0)) {
+                res.innerHTML = "True";
+            }else{
+                res.innerHTML = "False"
+            }
+        }
     </script>
 </body>
 
