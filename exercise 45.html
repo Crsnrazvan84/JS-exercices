@@ -1,14 +1,28 @@
 <html>
+
 <head>
     <title>exercise 45</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>45. Write a JavaScript program to check two given integer values and return true <br>
+        if one of the number is 15 or if their sum or difference is 15.</p>
+
+    <p>Enter 1st number: <input type="number" id="firstInput" oninput="check()"></p>
+    <p>Enter 2nd number: <input type="number" id="secondInput" oninput="check()"></p>
+    <p>Answer: <span id="result"></span></p>
+
 
     <script>
-    
+        function check() {
+            var a = document.getElementById('firstInput').value;
+            var b = document.getElementById('secondInput').value;
+            if (a == 15 || b == 15 || +a + +b == 15 || Math.abs(a - b) == 15) {
+                document.getElementById('result').innerHTML = "True"
+            } else {
+                document.getElementById('result').innerHTML = "False"
+            }
+        }
     </script>
 </body>
 
