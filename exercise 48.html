@@ -4,11 +4,17 @@
 </head>
 
 <body>
-    <p></p>
+    <p>48. Write a JavaScript program to reverse a given string.</p>
+    <p>Enter string here: <input type="text" id="txtInput" oninput="check()"></p>
+    <p>The reversed string is: <span id="result"></span></p>
     
 
     <script>
-    
+        function check(){
+            var text = document.getElementById('txtInput').value;
+            var rev = text.split("").reverse().join("");
+            document.getElementById('result').innerHTML = rev;
+        }
     </script>
 </body>
 
