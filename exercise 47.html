@@ -4,11 +4,27 @@
 </head>
 
 <body>
-    <p></p>
-    
+    <p>47. Write a JavaScript program to check if a number in the range 40..10000 inclusive presents in two number (in same range). <br>
+        For example 40 presents in 400 and 4000</p>
+
+        <p>Enter 1st number: <input type="number" id="firstInput" oninput="check()"></p>
+        <p>Enter 2nd number: <input type="number" id="secondInput" oninput="check()"></p>
+        <p>Enter 3rd number: <input type="number" id="thirdInput" oninput="check()"></p>
+        <p>Answer: <span id="result"></span></p>
 
     <script>
-    
+        function check(){
+            var a = document.getElementById('firstInput').value;
+            var b = document.getElementById('secondInput').value;
+            var c = document.getElementById('secondInput').value;
+            if (c < 40 || c > 10000) {
+                document.getElementById('result').innerHTML = "False";
+            }else if(c >= a && c <= b){
+                document.getElementById('result').innerHTML = "True";
+            }else{
+                document.getElementById('result').innerHTML = "False";
+            }
+        }
     </script>
 </body>
 
