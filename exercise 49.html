@@ -1,14 +1,36 @@
 <html>
+
 <head>
     <title>exercise 49</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>49. Write a JavaScript program to replace every character in a given string with the character following it in
+        the alphabet.</p>
+    <p>Enter text: <input type="text" oninput="replace()" id="txtInput"></p>
+    <p>The result is: <span id="result"></span></p>
 
     <script>
-    
+        function replace() {
+            var text = document.getElementById('txtInput').value;
+            var res = text.split("");
+            for (var i = 0; i < res.length; i++) {
+                switch (res[i]) {
+                    case ' ':
+                        break;
+                    case 'z':
+                        res[i] = 'a';
+                        break;
+                    case 'Z':
+                        res[i] = 'A';
+                        break;
+                    default:
+                        res[i] = String.fromCharCode(1 + res[i].charCodeAt(0));
+                    document.getElementById('result').innerHTML = res.join("");
+                }
+            }
+     
+            }
     </script>
 </body>
 
