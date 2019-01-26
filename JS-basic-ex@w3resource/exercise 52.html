@@ -4,11 +4,17 @@
 </head>
 
 <body>
-    <p></p>
+    <p>Write a JavaScript program to convert the letters of a given string in alphabetical order.</p>
+    <p>Enter string: <input type="text" id="demo" oninput="alphabetize()" ></p>
+    <p>The result is: <span id="result"></span></p>
     
 
     <script>
-    
+    function alphabetize(){
+        var input = document.getElementById('demo').value;
+        var result = input.split('').sort().join('');   
+        return document.getElementById('result').innerHTML = result;
+    }
     </script>
 </body>
 

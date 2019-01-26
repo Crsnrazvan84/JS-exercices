@@ -1,14 +1,26 @@
 <html>
+
 <head>
     <title>exercise 51</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>Write a JavaScript program to convert a given number to hours and minutes</p>
+    <p>Enter a number: <input type="number" id="inputNr" oninput="toHours()"></p>
+    <p>Equals to <span id="hours"></span><span id="minutes"></span></p>
+
 
     <script>
-    
+        function toHours() {
+            var num = document.getElementById('inputNr').value;
+            var hours = Math.floor(num / 60);
+            var minutes = num % 60;
+            if (hours === 0) {
+                document.getElementById('hours').innerHTML = minutes + " minutes";
+            } else {
+                document.getElementById('hours').innerHTML = hours + " hours and " + minutes + " minutes";
+            }
+        }
     </script>
 </body>
 

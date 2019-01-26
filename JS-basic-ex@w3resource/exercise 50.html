@@ -1,14 +1,24 @@
 <html>
+
 <head>
     <title>exercise 50</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p> Write a JavaScript program to capitalize the first letter of each word of a given string.</p>
+    <p>Enter text here: <input type="text" id="demo" oninput="capitalize()"></p>
+    <p id="result"></p>
 
     <script>
+        function capitalize() {
+            var str = document.getElementById('demo').value;
+            str = str.split(" ");
     
+            for (var i = 0; i < str.length; i++) {
+                str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+            }
+            document.getElementById('result').innerHTML = str.join(" ");
+        }
     </script>
 </body>
 

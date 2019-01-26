@@ -1,6 +1,6 @@
 
 //given FIXED array
-var x = [4, 3, 2, 1]
+var x = [15, 7, 8, 1]
 
 //given DYNAMIC array
 
@@ -66,15 +66,15 @@ function sortAscendingFixed() {
 
     }
 
-    // if (x[1] > x[2]) {
-    //     x[2] = x[1];
-    //     x[1] = c;
-    // }
+    if (x[1] > x[2]) {
+        x[2] = x[1];
+        x[1] = c;
+    }
 
-    // if (x[2] > x[3]){
-    //     x[3] = x[2]
-    //     x[2] = d;
-    // }
+    if (x[2] > x[3]){
+        x[3] = x[2]
+        x[2] = d;
+    }
 
 
     console.log('x0 is ', x[0]);
@@ -87,24 +87,4 @@ function sortAscendingFixed() {
 sortAscendingFixed();
 
 
-//sort ascending dynamic
 
-function sortAscending() {
-    var sorta = y.sort(
-        function (a, b) {
-            return a - b
-        }
-    )
-    console.log('Sort ascending: ', sorta)
-}
-// sortAscending();
-
-//sort descending dynamic
-
-function sortDescending() {
-    var sortd = y.sort(function (a, b) {
-        return b - a
-    })
-    console.log('Sort descending ', sortd)
-}
-// sortDescending();
