@@ -1,8 +1,7 @@
 # Basic HTML, CSS & Javascript exercices
 
 ```
-Learning JS, HTML and CSS exercises
+Various learning JS, HTML and CSS exercises
 ```
-```
-Exercises from https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php
-```
+
+Exercises from [w3resource](https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php)
