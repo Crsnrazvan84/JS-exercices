@@ -1,4 +1,4 @@
-# JS-exercices
+# Basic Javascript exercices
 
 ```
 Learning JS, HTML and CSS exercises
