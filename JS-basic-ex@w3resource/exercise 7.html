@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Check if 1 january falls on a Sunday</title>
+    </head>
+    <body>
+        <p>7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.</p>
+        <p id="result"></p>
+
+
+        <script>
+        for(var year = 2014 ; year <= 2050 ; year++) {
+            var d = new Date(year, 0, 1);
+            var c = "";
+            if(d.getDay() === 0){
+                console.log(`1st January is being a Sunday in ${year}`);
+            }
+
+        }
+        
+        </script>
+    </body>
+</html>
