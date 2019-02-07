@@ -6,16 +6,22 @@
 
 <body>
     <p>53. Write a JavaScript program to check if the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.</p>
-
+    <p>enter text here: <input type="text" id="input" oninput="abCheck()"></p>
+    <p>The result is: <span id="result"></span> </p>
 
     <script>
-        function ab_Check(str) {
-            return (/a...b/).test(str) || (/b...a/).test(str);
-        }
+        
+       
+            function abCheck(){
+                var inputTxt = document.querySelector('input').value;        
+                var trueFalse = ""; 
+                trueFalse = (Math.abs( inputTxt.indexOf("a") - inputTxt.indexOf("b")) == 4) ? true : false;
 
-        console.log(ab_Check("Chainsbreak"));
-        console.log(ab_Check("pane borrowed"));
-        console.log(ab_Check("abCheck"));
+                if(inputTxt == ""){
+                    trueFalse = "";
+                }
+                document.getElementById('result').innerHTML = trueFalse;
+            }
     </script>
 </body>
 
