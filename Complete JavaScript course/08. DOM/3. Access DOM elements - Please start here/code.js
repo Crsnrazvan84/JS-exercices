@@ -34,3 +34,17 @@ p.appendChild(textNode);
 console.log(p);
 document.body.appendChild(p);
 console.log(window.document);
+
+
+//access a sibling
+var sibling = p1.nextElementSibling.nextElementSibling;
+console.log(sibling);
+
+//access first child or last child
+var list = document.querySelector('ul');
+console.log(list.firstChild);
+console.log(list.lastChild);
+
+//parent element
+var bmw = document.querySelector('li');
+console.log(bmw.parentNode);
