@@ -30,3 +30,13 @@ p2.onclick = function() {
 
 //
 var title = document.getElementById('title');
+title.addEventListener('click', function() {
+    this.style.position = "fixed";
+    var x = 0;
+    var a =  setInterval(function() {
+        x++;
+        title.style.top =100 + 100 * Math.sin(x/10) + 'px';
+        title.style.left =100 + 100 * Math.sin(4*x/10) + 'px';
+    }, 100)
+
+})
