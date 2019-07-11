@@ -23,7 +23,7 @@ function phone2(warranty) {
 function smartPhone(make, model, warranty) {
     this.make = make;
     this.model = model;
-    this.warranty = warranty;
+    this.warranty = 12;
 }
 
 //augment function
@@ -48,3 +48,25 @@ function augment(receivingClass, givingClass) {
 // //hasOwnProperty
 // var myPhone = new phone1();
 // console.log(myPhone.hasOwnProperty("extendWarranty"));
+
+//create an instance of smartPhone
+var mySmartPhone =  new smartPhone('Apple', 'Iphone 6');
+console.log(mySmartPhone);
+printPropreties(mySmartPhone);
+
+//augment mySMartPhone using phone1
+augment(smartPhone, phone1);
+printPropreties(mySmartPhone);
+console.log(mySmartPhone);
+console.log(mySmartPhone.warranty);
+
+//augment mySMartPhone using phone2
+augment(smartPhone, phone2);
+printPropreties(mySmartPhone);
+
+function printPropreties(o) {
+    console.log('Propreties');
+    for(var i in o){
+        console.log(i);
+    }
+}
