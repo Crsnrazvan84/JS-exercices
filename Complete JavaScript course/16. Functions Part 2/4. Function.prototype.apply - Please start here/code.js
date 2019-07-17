@@ -58,7 +58,7 @@ function smartPhone(make, model, operator){
 var myPhone = new smartPhone('Apple', 'Iphone 6', 'orange');
 console.log(myPhone);
 
-phone.call(myPhone, myPhone.make, myPhone.model);
+phone.apply(myPhone, [myPhone.make, myPhone.model]);
 console.log(myPhone);
 
 
