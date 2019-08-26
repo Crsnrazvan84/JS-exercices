@@ -1,14 +1,48 @@
 <html>
+
 <head>
     <title>exercise 57</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>
+        57. Write a JavaScript program to create a new string of specified copies (positive number) of a given string.
+    </p>
+    <label for="txtInput">Enter text here: </label>
+    <input type="text" id="txtInput">
+    <p>
+        How many copies do you want to make?
+        <select id="selectNr">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+        </select>
+    </p>
+    <button id="createCopies">Create</button>
+    <p id="result"></p>
 
     <script>
     
+        const txtInput = document.querySelector('#txtInput');
+        const selectNr = document.querySelector('#selectNr');
+        const createCopies = document.querySelector('#createCopies');
+        const result = document.querySelector('#result');
+
+        const createStringCopies = () =>{
+            result.innerHTML = "";
+           for (let i = 0; i < selectNr.value; i++) {
+               result.innerHTML += txtInput.value + '<br>';
+           }
+        }
+
+        createCopies.addEventListener('click', createStringCopies);
     </script>
 </body>
 
