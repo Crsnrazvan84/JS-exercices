@@ -1,14 +1,24 @@
 <html>
+
 <head>
     <title>exercise 54</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>Write a JavaScript program to count the number of vowels in a given string.</p>
+    <input type="text" id="input">
+    <p id="result"></p>
+
 
     <script>
-    
+        const txtInput = document.querySelector('#input');
+        const result = document.querySelector('#result');
+        
+        const countWowels = (text) => text.replace(/[^aeiou]/g, "").length;
+        txtInput.addEventListener('input', () => result.innerHTML = `There are ${countWowels(txtInput.value)} vowels in your text`);
+
+        
+        
     </script>
 </body>
 
