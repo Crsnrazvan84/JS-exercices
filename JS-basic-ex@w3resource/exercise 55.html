@@ -1,14 +1,35 @@
 <html>
+
 <head>
     <title>exercise 55</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>55. Write a JavaScript program to check if a given string contains equal number of p's and t's present. </p>
+    <input type="text" id="input">
+    <p id="result"></p>
+
 
     <script>
-    
+        const txtInput = document.querySelector('#input');
+        const result = document.querySelector('#result');
+
+        const checkResults = (str) => {
+            str = str.toLowerCase();
+            const checkP = str.replace(/[^p]/g, "");
+            const checkT = str.replace(/[^t]/g, "");
+
+            const timesP = checkP.length;
+            const timesT = checkT.length;
+            const checkEquality = timesP == timesT ? 'equal' : 'unequal';
+
+            return result.innerHTML = `The number of P's and T's is ${checkEquality}`;
+        }
+
+        txtInput.addEventListener('input', function () {
+            checkResults(txtInput.value)
+        });
+
     </script>
 </body>
 
