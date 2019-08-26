@@ -1,14 +1,44 @@
 <html>
+
 <head>
     <title>exercise 56</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>56. Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas
+    </p>
+    <p>
+        <label for="first-nr">Insert first number here</label>
+        <input type="number" id="first-nr">
+    </p>
+    <p>
+        <label for="second-nr">Insert second number here</label>
+        <input type="number" id="second-nr">
+    </p>
+    <button id="divide">Divide</button>
+    <p>The result is: <span id="result"></span></p>
+
 
     <script>
-    
+        const firstNr_input = document.querySelector('#first-nr');
+        const secondNr_input = document.querySelector('#second-nr');
+        const divide = document.querySelector('#divide');
+        const result = document.querySelector('#result');
+
+        const divideNumbers = (a, b) => {
+            a = firstNr_input.value;
+            b = secondNr_input.value;
+
+            if(a >= 0 && b >= 0){
+                result.innerHTML =  a / b;
+            }else{
+                result.innerHTML = "Both inputs must be positive numbers";
+            }
+        }
+
+        divide.addEventListener('click', divideNumbers);
+       
+
     </script>
 </body>
 
