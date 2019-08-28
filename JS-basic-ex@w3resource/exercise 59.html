@@ -1,14 +1,38 @@
 <html>
+
 <head>
     <title>exercise 59</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>
+        59. Write a JavaScript program to extract the first half of a string of even length.
+    </p>
+
+    <label for="txtInput">Enter text here: </label>
+    <input type="text" id="txtInput">
+    <button id="create">Create</button>
+    <p id="result"></p>
+
 
     <script>
-    
+        const txtInput = document.querySelector('#txtInput');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const firstHalf = str => {
+            str = txtInput.value;
+            if (str.length % 2 != 0) {
+                result.innerHTML = "The string musthave an even length"
+            } else {
+                const resultedText = str.substring(0, str.length / 2);
+                result.innerHTML = resultedText;
+            }
+        }
+
+        create.addEventListener('click', firstHalf);
+
+
     </script>
 </body>
 
