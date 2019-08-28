@@ -5,10 +5,33 @@
 </head>
 
 <body>
-    <p></p>
-
+    <p>
+        61. Write a JavaScript program to concatenate two strings except their first character.
+    </p>
+    <p>
+        <label for="txtInput1">Enter first text here: </label>
+        <input type="text" id="txtInput1">
+    </p>
+    <p>
+        <label for="txtInput2">Enter second text here: </label>
+        <input type="text" id="txtInput2">
+    </p>
+    <button id="create">Create</button>
+    <p id="result"></p>
 
     <script>
+        const txtInput1 = document.querySelector('#txtInput1');
+        const txtInput2 = document.querySelector('#txtInput2');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const newString = (str1, str2) => {
+            str1 = txtInput1.value.slice(1);
+            str2 = txtInput2.value.slice(1);
+            result.innerHTML = str1 + str2;
+        }
+
+        create.addEventListener('click', newString);
 
     </script>
 </body>
