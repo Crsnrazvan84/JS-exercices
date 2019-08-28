@@ -1,14 +1,36 @@
 <html>
+
 <head>
     <title>exercise 58</title>
 </head>
 
 <body>
-    <p></p>
-    
+    <p>
+        58. Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a given original
+        string. The length of the given string must be 3 and above.
+    </p>
+    <label for="txtInput">Enter text here: </label>
+    <input type="text" id="txtInput">
+    <button id="create">Create</button>
+    <p id="result"></p>
+
 
     <script>
-    
+        const txtInput = document.querySelector('#txtInput');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        function createCopies(str) {
+            if (txtInput.value.length < 4) {
+                result.innerHTML = "The length of the given string must be 3 and above";
+            } else {
+                str = txtInput.value;
+                const createdText = str.slice(-3).repeat(4);
+                result.innerHTML = createdText
+            }
+        }
+
+        create.addEventListener('click', createCopies)
     </script>
 </body>
 
