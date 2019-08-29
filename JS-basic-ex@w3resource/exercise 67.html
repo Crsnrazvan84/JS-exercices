@@ -5,10 +5,37 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        67. Write a JavaScript program to create a new string from a given string, removing the first and last
+        characters of the string if the first or last character are 'P'. Return the original string if the condition is
+        not satisfied.
+    </p>
+
+    <label for="txtInput">Enter text here: </label>
+    <input type="text" id="txtInput">
+    <button id="create">Check</button>
+    <p id="result"></p>
 
 
     <script>
+        const txtInput = document.querySelector('#txtInput');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const removeP = str => {
+            str = txtInput.value;
+            if(str.slice(0, 1) == 'P'){
+                str = str.slice(1, str.length)
+                console.log(str);
+            }
+            if(str.slice(-1) == "P"){
+                str = str.slice(0, str.length - 1)
+                console.log(str)
+            }
+           result.innerHTML = str;
+        }
+
+        create.addEventListener('click', removeP);
 
     </script>
 </body>
