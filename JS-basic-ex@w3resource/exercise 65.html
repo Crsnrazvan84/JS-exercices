@@ -5,10 +5,30 @@
 </head>
 
 <body>
-    <p></p>
-
+    <p>
+        65. Write a JavaScript program to test if a string end with "Script". The string length must be greater or equal
+        to 6.
+    </p>
+    <label for="txtInput">Enter text here: </label>
+    <input type="text" id="txtInput">
+    <button id="create">Check</button>
+    <p id="result"></p>
 
     <script>
+        const txtInput = document.querySelector('#txtInput');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const endsWithScript = str => {
+            str = txtInput.value;
+            if (str.length < 6) {
+                return result.innerHTML = 'The string length must be greater or equal  to 6';
+            }
+            const checkScript = str.slice(-6) == "Script";
+            result.innerHTML = checkScript
+        }
+
+        create.addEventListener('click', endsWithScript);
 
     </script>
 </body>
