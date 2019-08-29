@@ -5,10 +5,33 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        62. Write a JavaScript program to move last three character to the start of a given string. The string length
+        must be greater or equal to three.
+    </p>
+    <label for="txtInput">Enter text here: </label>
+    <input type="text" id="txtInput">
+    <button id="create">Create</button>
+    <p id="result"></p>
 
 
     <script>
+        const txtInput = document.querySelector('#txtInput');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const newString = str => {
+            str = txtInput.value;
+            if (str.length < 3) {
+                return result.innerHTML = 'The string length must be greater or equal to three';
+            }
+
+            const lastThree = str.slice(-3);
+            str = str.slice(0, str.length - 3);
+            result.innerHTML = lastThree + str;
+        }
+
+        create.addEventListener('click', newString);
 
     </script>
 </body>
