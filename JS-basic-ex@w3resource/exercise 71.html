@@ -5,10 +5,22 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        71. Write a JavaScript program to check if 1 appears in first or last position of a given array of integers. The
+        array length must be greater or equal to 1.
+    </p>
+    <p>
+        open console
+    </p>
 
 
     <script>
+        const checForOne = num => num[0] == 1 || num.pop() == 1;
+
+        console.log(checForOne([1, 2, 3]));
+        console.log(checForOne([3, 2, 1]));
+        console.log(checForOne([2, 2, 3]));
+       
 
     </script>
 </body>
