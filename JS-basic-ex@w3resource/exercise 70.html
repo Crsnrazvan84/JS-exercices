@@ -5,10 +5,25 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        70. Write a JavaScript program to rotate the elements left of a given array of integers of length 3.
+    </p>
+    <p>
+        Open console
+    </p>
 
 
     <script>
+        const rotateElements = (a, b, c) => {
+            let elements = [a, b, c];
+            let pop = elements.pop();
+            elements.unshift(3);
+            console.log(elements)
+        }
+
+        rotateElements(1, 2, 3)
+
+
 
     </script>
 </body>
