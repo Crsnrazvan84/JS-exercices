@@ -5,10 +5,21 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        72. Write a JavaScript program to check if the first and last elements are equal of a given array of integers
+        length 3.
+    </p>
+    <p>
+        open console
+    </p>
 
 
     <script>
+        const checForOne = num => num.shift() == num.pop();
+
+        console.log(checForOne([1, 2, 3]));
+        console.log(checForOne([3, 2, 1]));
+        console.log(checForOne([2, 2, 2]));
 
     </script>
 </body>
