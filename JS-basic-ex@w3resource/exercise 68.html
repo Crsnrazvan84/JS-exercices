@@ -5,10 +5,49 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        68. Write a JavaScript program to create a new string using the first and last n characters from a given sting.
+        The string length must be greater or equal to n.
+    </p>
+
+    <p>
+        <label for="txtInput">Enter text here: </label>
+        <input type="text" id="txtInput">
+    </p>
+    <label for="nrOfCharacters">Number of characters: </label>
+    <p>
+        <select name="" id="nrOfCharacters">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </p>
+    <button id="create">Create</button>
+    <p id="result"></p>
 
 
     <script>
+        const txtInput = document.querySelector('#txtInput');
+        const nrOfCharacters = document.querySelector('#nrOfCharacters');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const newString = (str, n) => {
+            str = txtInput.value;
+            n = nrOfCharacters.value;
+
+            if (str.length >= n) {
+                const firstChars = str.slice(0, n);
+                const lastChars = str.slice(-n);
+                result.innerHTML = firstChars + lastChars;
+            } else {
+                result.innerHTML = 'The string length must be greater or equal to n';
+            }
+        }
+
+        create.addEventListener('click', newString);
 
     </script>
 </body>
