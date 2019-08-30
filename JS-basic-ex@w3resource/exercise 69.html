@@ -5,10 +5,36 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        69. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3
+    </p>
+
+    <label for="txtInput">Enter 3 integers: </label>
+    <input type="text" id="txtInput">
+    <button id="create">Sum</button>
+    <p id="result"></p>
 
 
     <script>
+        const txtInput = document.querySelector('#txtInput');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const sumNums = num => {
+            num = txtInput.value;
+            const reg = /^\d+$/;
+         
+            if (num.length == 3 && reg.test(num)) {
+                num = num.split("");
+                const sum = parseInt(num[0]) + parseInt(num[1]) + parseInt(num[2]);
+                result.innerHTML = sum;
+            } else {
+                result.innerHTML = "You must enter 3 integers"
+            }
+
+        }
+
+        create.addEventListener('click', sumNums);
 
     </script>
 </body>
