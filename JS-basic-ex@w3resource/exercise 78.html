@@ -5,7 +5,29 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+            78. Write a JavaScript program to test if an array of integers of length 2 does not contain 1 or a 3.
+    </p>
+    <p>
+            open console
+        </p>
+    
+    
+        <script>
+    
+            const checkArray = arr => {
+               if(arr.includes(1) || arr.includes(3)){
+                   return false
+               }else{
+                   return true
+               }
+            }
+    
+            console.log(checkArray([1, 2, 3]))
+            console.log(checkArray([2, 3]))
+            console.log(checkArray([7, 5]))
+    
+        </script>
 
 
     <script>
