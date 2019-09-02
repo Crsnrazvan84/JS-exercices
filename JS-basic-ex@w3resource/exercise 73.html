@@ -5,10 +5,26 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        73. Write a JavaScript program to reverse the elements of a given array of integers length 3.
+    </p>
 
+    <label for="txtInput">Enter 3 integers: </label>
+    <input type="text" id="txtInput">
+    <button id="create">Reverse</button>
+    <p id="result"></p>
 
     <script>
+        const txtInput = document.querySelector('#txtInput');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const reverse = str => {
+            str = txtInput.value;
+            result.innerHTML = str.split("").reverse().join("");
+        }
+
+        create.addEventListener('click', reverse);
 
     </script>
 </body>
