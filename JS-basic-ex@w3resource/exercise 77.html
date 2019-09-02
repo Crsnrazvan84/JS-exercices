@@ -5,10 +5,23 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        77. Write a JavaScript program to test if an array of integers of length 2 contains 1 or a 3
+    </p>
+    <p>
+        open console
+    </p>
 
 
     <script>
+
+        const checkArray = arr => {
+            return arr.includes(1) || arr.includes(3);
+        }
+
+        console.log(checkArray([1, 2, 3]))
+        console.log(checkArray([2, 3]))
+        console.log(checkArray([7, 5]))
 
     </script>
 </body>
