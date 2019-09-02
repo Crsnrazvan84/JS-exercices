@@ -5,10 +5,31 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        76. Write a JavaScript program to create a new array taking the first and last elements from a given array of
+        integers and length must be greater or equal to 1.
+    </p>
+
+    <label for="txtInput">Enter text: </label>
+    <input type="text" id="txtInput">
+    <button id="create">Create</button>
+    <p id="result"></p>
 
 
     <script>
+        const txtInput = document.querySelector('#txtInput');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const newArray = arr => {
+
+            arr = txtInput.value.split("");
+            const newArr = [];
+            newArr.push(arr[0], arr[arr.length - 1])
+            result.innerHTML = newArr;
+        }
+
+        create.addEventListener('click', newArray)
 
     </script>
 </body>

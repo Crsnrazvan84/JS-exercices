@@ -5,10 +5,38 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        75. Write a JavaScript program to create a new array taking the middle elements of the two arrays of integer and
+        each length 3.
+    </p>
+    <label for="txtInput1">Enter first text here: </label>
+    <input type="text" id="txtInput1">
+    </p>
+    <p>
+        <label for="txtInput2">Enter second text here: </label>
+        <input type="text" id="txtInput2">
+    </p>
+    <button id="create">Create</button>
+    <p id="result"></p>
 
 
     <script>
+
+        const txtInput1 = document.querySelector('#txtInput1');
+        const txtInput2 = document.querySelector('#txtInput2');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const newArray = (str1, str2) => {
+            str1 = txtInput1.value.split("");
+            str2 = txtInput2.value.split("");
+            
+            const str3 = [str1[1], str2[1]]
+            result.innerHTML = str3;
+        }
+
+        create.addEventListener('click', newArray)
+
 
     </script>
 </body>
