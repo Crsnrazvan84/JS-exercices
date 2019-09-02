@@ -5,10 +5,41 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        74. Write a JavaScript program to find the larger value between the first or last and set all the other elements
+        with that value. Display the new array.
+    </p>
+
+    <label for="txtInput">Enter 3 integers: </label>
+    <input type="text" id="txtInput">
+    <button id="create">Create</button>
+    <p id="result"></p>
 
 
     <script>
+        const txtInput = document.querySelector('#txtInput');
+        const create = document.querySelector('#create');
+        const result = document.querySelector('#result');
+
+        const newArray = arr => {
+            arr = txtInput.value.split("");
+            const first = arr.shift();
+            const last = arr.pop();
+
+            let newArr = txtInput.value.split("");
+
+            for (let i = 0; i < newArr.length; i++) {
+                if (first > last) {
+                    newArr[i] = first;
+                } else {
+                    newArr[i] = last;
+                }
+            }
+
+            result.innerHTML = newArr;
+        }
+
+        create.addEventListener('click', newArray)
 
     </script>
 </body>
