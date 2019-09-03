@@ -5,10 +5,28 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        80. Write a JavaScript program to swap the first and last elements of a given array of integers. The array
+        length should be at least 1
+    </p>
+    <p>
+        open console
+    </p>
 
 
     <script>
+
+        const swap2 = arr => {
+            const first = arr[0];
+            const last = arr[arr.length - 1];
+            arr[0] = last;
+            arr[arr.length - 1] = first;
+            console.log(arr);
+        }
+
+        swap2([1, 2, 3, 4]);
+        swap2([0, 2, 1]);
+        swap2([3]);
 
     </script>
 </body>
