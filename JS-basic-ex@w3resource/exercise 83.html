@@ -5,10 +5,22 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        83. Write a JavaScript to find the longest string from an given array of strings;
+    </p>
+    <p>
+        open console
+    </p>
 
 
     <script>
+
+        const longest = arr => {
+            arr = arr.sort((a, b) => b.length - a.length);
+            return arr[0];
+        }
+
+        console.log(longest(['a', 'aa', 'aaa', 'aaaaa', 'aaaa']))
 
     </script>
 </body>
