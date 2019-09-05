@@ -5,10 +5,33 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        86. Write a JavaScript program to find the types of a given angle.
+    </p>
+    <p>
+        open console
+    </p>
 
 
     <script>
+
+        const typeOfAngle = degrees => {
+            if (degrees < 90) {
+                return "Acute angle.";
+            }
+            if (degrees === 90) {
+                return "Right angle.";
+            }
+            if (degrees < 180) {
+                return "Obtuse angle.";
+            }
+            return "Straight angle.";
+        }
+
+        console.log(typeOfAngle(47))
+        console.log(typeOfAngle(90))
+        console.log(typeOfAngle(145))
+        console.log(typeOfAngle(180))
 
     </script>
 </body>
