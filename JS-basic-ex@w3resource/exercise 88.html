@@ -5,10 +5,23 @@
 </head>
 
 <body>
-    <p></p>
+    <p>
+        88. Write a JavaScript program to check whether two given integers are similar or not, if a given divisor
+        divides both integers and it does not divide either.
+    </p>
+    <p>
+        open console
+    </p>
 
 
     <script>
+
+        const checkIntegers = (num1, num2, divisor) => (num1 % divisor == 0 && num2 % divisor == 0) || (num1 % divisor != 0 && num2 % divisor != 0);
+
+        console.log(checkIntegers(10, 25, 5))
+        console.log(checkIntegers(10, 20, 5))
+        console.log(checkIntegers(10, 20, 4))
+
 
     </script>
 </body>
